@@ -5,12 +5,16 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using TodoApp.Identity.Models;
+using TodoApp.Identity.Services;
 
 namespace TodoApp.Identity
 {
@@ -26,11 +30,24 @@ namespace TodoApp.Identity
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<AuthDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("IdentityConnection")));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo {Title = "TodoApp.Identity", Version = "v1"});
             });
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<AuthDbContext>()
+                .AddDefaultTokenProviders(); // Что это делает?
+
+            services.AddIdentityServer(options => options.IssuerUri = "localhost")
+                .AddInMemoryApiResources(IdentityConfiguration.GetApiResources())
+                .AddInMemoryIdentityResources(IdentityConfiguration.GetIdentityResources())
+                .AddInMemoryClients(IdentityConfiguration.GetClients())
+                .AddAspNetIdentity<ApplicationUser>()
+                .AddDeveloperSigningCredential(false);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -47,7 +64,11 @@ namespace TodoApp.Identity
 
             app.UseRouting();
 
+            app.UseAuthentication();
+            
             app.UseAuthorization();
+
+            app.UseIdentityServer();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
