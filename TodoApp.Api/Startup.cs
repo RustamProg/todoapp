@@ -7,11 +7,14 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using TodoApp.Api.Helpers;
+using TodoApp.Api.Models.DbContexts;
 using TodoApp.Api.Services;
 
 namespace TodoApp.Api
@@ -28,6 +31,8 @@ namespace TodoApp.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<SqlServerDbContext>(options =>
+                options.UseSqlServer(Configuration.GetConnectionString("TodoConnection")));
             services.AddControllers();
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddIdentityServerAuthentication(JwtBearerDefaults.AuthenticationScheme, options =>
@@ -37,6 +42,10 @@ namespace TodoApp.Api
                     options.RequireHttpsMetadata = false;
                 });
             services.AddSwaggerAuthentication();
+
+            services.AddScoped<IDbRepository, DbRepository>();
+            services.AddScoped<ITodoService, TodoService>();
+            services.AddScoped<ICurrentUser, CurrentUser>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,6 +65,8 @@ namespace TodoApp.Api
             app.UseAuthentication();
             
             app.UseAuthorization();
+
+            app.UseMiddleware<CurrentUserMiddleware>();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }

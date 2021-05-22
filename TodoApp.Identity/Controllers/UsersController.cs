@@ -1,7 +1,9 @@
 using System.Linq;
+using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using IdentityModel;
+using IdentityModel.Client;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TodoApp.Identity.Models;
@@ -14,11 +16,13 @@ namespace TodoApp.Identity.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly HttpClient _httpClient;
 
-        public UsersController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
+        public UsersController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, HttpClient httpClient)
         {
             _userManager = userManager;
             _roleManager = roleManager;
+            _httpClient = httpClient;
         }
 
         [HttpPost("register")]
@@ -59,10 +63,12 @@ namespace TodoApp.Identity.Controllers
         }
 
         // Это не нужно?
+        /*
         [HttpPost("login")]
         public IActionResult Login(UserLoginDto userToLogin) 
         {
             return null; // Пока не реализовал
-        }
+        }*/
+        
     }
 }
