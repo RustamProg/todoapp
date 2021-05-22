@@ -45,6 +45,7 @@ namespace TodoApp.Identity
             services.AddIdentityServer(options => options.IssuerUri = "localhost")
                 .AddInMemoryApiResources(IdentityConfiguration.GetApiResources())
                 .AddInMemoryIdentityResources(IdentityConfiguration.GetIdentityResources())
+                .AddInMemoryApiScopes(IdentityConfiguration.GetScopes())
                 .AddInMemoryClients(IdentityConfiguration.GetClients())
                 .AddAspNetIdentity<ApplicationUser>()
                 .AddDeveloperSigningCredential(false);

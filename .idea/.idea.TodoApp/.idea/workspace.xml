@@ -5,20 +5,17 @@
     <projectFile>TodoApp.Api/TodoApp.Api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aef5398-ff77-4310-9e59-607ce6f0a696" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Controllers/WeatherForecastController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/TodoApp.Api.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/WeatherForecast.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/appsettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Identity/Models/UserLoginDto.cs" afterDir="false" />
+    <list default="true" id="1aef5398-ff77-4310-9e59-607ce6f0a696" name="Default Changelist" comment="comment">
+      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Services/ServiceCollectionExtensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Identity/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Identity/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Identity/Models/UserDto.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Identity/Models/UserRegisterDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.sln" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Controllers/WeatherForecastController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/TodoApp.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/TodoApp.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/WeatherForecast.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,17 +25,24 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://D:/C#Utils/Learn/TodoProject/TodoApp/TodoApp.Identity/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/TodoApp.Identity/Models/ApplicationUser.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Models/AuthDbContext.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/appsettings.json" />
-      <option value="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Models/UserDTO.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityConfiguration.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Models/UserDto.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Models/UserLoginDto.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Controllers/UsersController.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Properties/launchSettings.json" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/ServiceCollectionExtensions.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityConfiguration.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Startup.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sqYwOdgJNpc2lAvAxOtTUSNQ10" />
@@ -59,7 +63,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.environmentSetup" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.TodoApp.Identity">
+  <component name="RunManager" selected=".NET Launch Settings Profile.TodoApp.Api">
     <configuration name="TodoApp.Api" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/TodoApp.Api/TodoApp.Api.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net5.0" />
@@ -131,7 +135,7 @@
       <updated>1621601825965</updated>
       <workItem from="1621601833569" duration="2339000" />
       <workItem from="1621607145933" duration="3110000" />
-      <workItem from="1621675017047" duration="777000" />
+      <workItem from="1621675017047" duration="3309000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1621601849025</created>
@@ -147,7 +151,21 @@
       <option name="project" value="LOCAL" />
       <updated>1621608910554</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="register/login changes">
+      <created>1621675851224</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1621675851224</updated>
+    </task>
+    <task id="LOCAL-00004" summary="comment">
+      <created>1621675918597</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1621675918597</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,6 +189,8 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="IdentityServer4 created" />
-    <option name="LAST_COMMIT_MESSAGE" value="IdentityServer4 created" />
+    <MESSAGE value="register/login changes" />
+    <MESSAGE value="comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment" />
   </component>
 </project>

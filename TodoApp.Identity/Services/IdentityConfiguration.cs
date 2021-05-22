@@ -63,5 +63,13 @@ namespace TodoApp.Identity.Services
                 }
             };
         }
+
+        public static IEnumerable<ApiScope> GetScopes()
+        {
+            return new List<ApiScope>
+            {
+                new ApiScope("TodoAPI")
+            };
+        }
     }
 }
