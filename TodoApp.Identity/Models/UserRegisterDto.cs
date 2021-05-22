@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TodoApp.Identity.Models
 {
-    public class UserDto
+    public class UserRegisterDto
     {
         [Required]
         public string Username { get; set; }
