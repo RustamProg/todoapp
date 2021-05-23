@@ -8,7 +8,7 @@ using TodoApp.Api.Services;
 namespace TodoApp.Api.Controllers
 {
     [ApiController]
-    [Authorize]
+    //[Authorize]
     [Route("todo")]
     public class TodoController : Controller
     {
@@ -46,10 +46,10 @@ namespace TodoApp.Api.Controllers
             return Ok(_todoService.GetTodoById(id));
         }
 
-        [HttpGet("current-user-todos")]
+        /*[HttpGet("current-user-todos")]
         public IActionResult GetUser()
         {
             return Ok(_todoService.GetUsersTodos());
-        }
+        }*/
     }
 }

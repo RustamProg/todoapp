@@ -46,6 +46,7 @@ namespace TodoApp.Api
             services.AddScoped<IDbRepository, DbRepository>();
             services.AddScoped<ITodoService, TodoService>();
             services.AddScoped<ICurrentUser, CurrentUser>();
+            services.AddScoped<ITodoCommentsService, TodoCommentsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,7 +67,7 @@ namespace TodoApp.Api
             
             app.UseAuthorization();
 
-            app.UseMiddleware<CurrentUserMiddleware>();
+            //app.UseMiddleware<CurrentUserMiddleware>();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }

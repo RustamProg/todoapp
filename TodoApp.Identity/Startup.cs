@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using IdentityServer4;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -40,6 +41,7 @@ namespace TodoApp.Identity
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<AuthDbContext>()
+                //.AddClaimsPrincipalFactory<CustomUserClaimsPrincipalFactory>();
                 .AddDefaultTokenProviders(); // Что это делает?
 
             services.AddIdentityServer(options => options.IssuerUri = "localhost")
@@ -49,6 +51,17 @@ namespace TodoApp.Identity
                 .AddInMemoryClients(IdentityConfiguration.GetClients())
                 .AddAspNetIdentity<ApplicationUser>()
                 .AddDeveloperSigningCredential(false);
+
+            services.AddAuthentication()
+                .AddGoogle("Google", options =>
+                {
+                    options.SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme;
+
+                    options.ClientId = "434483408261-55tc8n0cs4ff1fe21ea8df2o443v2iuc.apps.googleusercontent.com";
+                    options.ClientSecret = "3gcoTrEDPPJ0ukn_aYYT6PWo";
+                });
+            
+            services.AddTransient<IUserClaimsPrincipalFactory<ApplicationUser>, CustomUserClaimsPrincipalFactory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

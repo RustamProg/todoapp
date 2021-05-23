@@ -5,9 +5,23 @@
     <projectFile>TodoApp.Api/TodoApp.Api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aef5398-ff77-4310-9e59-607ce6f0a696" name="Default Changelist" comment="">
+    <list default="true" id="1aef5398-ff77-4310-9e59-607ce6f0a696" name="Default Changelist" comment="FromForm added">
+      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Controllers/CommentsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoApp.Api/DTOs/TodoCommentDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/TodoComment.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Services/ITodoCommentsService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Services/TodoCommentsService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoApp.Identity/Controllers/TestController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoApp.Identity/Services/CustomUserClaimsPrincipalFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityProfileService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Models/DbContexts/SqlServerDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Models/DbContexts/SqlServerDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/ITodoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Services/ITodoService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/TodoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Services/TodoService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Identity/TodoApp.Identity.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Identity/TodoApp.Identity.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +32,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/0CCBACCD-851B-467B-87B6-7E44C229D3AE/52/HttpClient.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/027AAB70-E669-496E-AFF5-E861C61CE63D/1/IdentityServerBuilderExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/519468D0-250D-4254-862D-A79F0051F843/B3/ProfileDataRequestContextExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5FFE8917-0314-4A7B-A075-2282CF0DB7D2/3/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/027AAB70-E669-496E-AFF5-E861C61CE63D/3/ProfileService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DAC046F9-6AB5-44F5-B46B-1AE6A128CF29/32/UserInfoRequest.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://D:/C#Utils/Learn/TodoProject/TodoApp/TodoApp.Api/Controllers/TodoController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7DADE0E0-07C4-4809-AAC9-1B78E77954E9/1B/UserClaimsPrincipalFactory.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D01EA799-E9C9-4F77-A043-C8ECB5387E2F/ff/7b2a568f/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/519468D0-250D-4254-862D-A79F0051F843/14/TestUserStore.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -32,24 +54,33 @@
       <option value="$PROJECT_DIR$/TodoApp.Api/Properties/launchSettings.json" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/ServiceCollectionExtensions.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityConfiguration.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/appsettings.json" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/BaseEntity.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbContexts/SqlServerDbContext.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/DTOs/TodoDto.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/DbRepository.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Controllers/UserInfoController.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/ICurrentUser.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/CurrentUser.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Entities/UserInfoRequest.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Api/Startup.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Helpers/CurrentUserMiddleware.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Identity/Controllers/UsersController.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/Todo.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Api/Services/ITodoService.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/IDbRepository.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Api/Services/TodoService.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Identity/Controllers/UsersController.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityProfileService.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Identity/Services/UserClaimsPrincipalFactory.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Identity/Services/CustomUserClaimsPrincipalFactory.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Identity/Controllers/TestController.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbContexts/SqlServerDbContext.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/TodoComment.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/ITodoCommentsService.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Startup.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/ITodoService.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/CommentsController.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/DTOs/TodoCommentDto.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/TodoService.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/TodoCommentsService.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sqYwOdgJNpc2lAvAxOtTUSNQ10" />
@@ -59,6 +90,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DatabaseDriversLRU" value="sqlserver" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34994584" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -70,7 +103,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.environmentSetup" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.TodoApp.Identity">
+  <component name="RunManager" selected=".NET Launch Settings Profile.TodoApp.Api">
     <configuration name="TodoApp.Api" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/TodoApp.Api/TodoApp.Api.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net5.0" />
@@ -143,7 +176,7 @@
       <workItem from="1621601833569" duration="2339000" />
       <workItem from="1621607145933" duration="3110000" />
       <workItem from="1621675017047" duration="11818000" />
-      <workItem from="1621772991569" duration="449000" />
+      <workItem from="1621772991569" duration="10299000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1621601849025</created>
@@ -187,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621688156563</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="FromForm added">
+      <created>1621773539792</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1621773539792</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,6 +255,72 @@
     <MESSAGE value="comment" />
     <MESSAGE value="Working registration and authorization (/connect/token)" />
     <MESSAGE value="Alpha user info getting" />
-    <option name="LAST_COMMIT_MESSAGE" value="Alpha user info getting" />
+    <MESSAGE value="FromForm added" />
+    <option name="LAST_COMMIT_MESSAGE" value="FromForm added" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/027AAB70-E669-496E-AFF5-E861C61CE63D/3/ProfileService.cs</url>
+          <line>72</line>
+          <properties documentPath="C:\Users\gabdu\AppData\Roaming\JetBrains\Rider2021.1\resharper-host\SourcesCache\027AAB70-E669-496E-AFF5-E861C61CE63D\3\ProfileService.cs" initialLine="72" containingFunctionPresentation="method 'GetProfileDataAsync'">
+            <startOffsets>
+              <option value="2719" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2761" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/027AAB70-E669-496E-AFF5-E861C61CE63D/3/ProfileService.cs</url>
+          <line>102</line>
+          <properties documentPath="C:\Users\gabdu\AppData\Roaming\JetBrains\Rider2021.1\resharper-host\SourcesCache\027AAB70-E669-496E-AFF5-E861C61CE63D\3\ProfileService.cs" initialLine="102" containingFunctionPresentation="method 'GetProfileDataAsync'">
+            <startOffsets>
+              <option value="3877" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3922" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/519468D0-250D-4254-862D-A79F0051F843/B3/ProfileDataRequestContextExtensions.cs</url>
+          <line>41</line>
+          <properties documentPath="C:\Users\gabdu\AppData\Roaming\JetBrains\Rider2021.1\resharper-host\SourcesCache\519468D0-250D-4254-862D-A79F0051F843\B3\ProfileDataRequestContextExtensions.cs" initialLine="41" containingFunctionPresentation="method 'AddRequestedClaims'">
+            <startOffsets>
+              <option value="1648" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1708" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/519468D0-250D-4254-862D-A79F0051F843/B3/ProfileDataRequestContextExtensions.cs</url>
+          <line>29</line>
+          <properties documentPath="C:\Users\gabdu\AppData\Roaming\JetBrains\Rider2021.1\resharper-host\SourcesCache\519468D0-250D-4254-862D-A79F0051F843\B3\ProfileDataRequestContextExtensions.cs" initialLine="29" containingFunctionPresentation="method 'FilterClaims'">
+            <startOffsets>
+              <option value="1082" />
+              <option value="1107" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1162" />
+              <option value="1151" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="LaunchSettings">
+        <watch expression="x.Type" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
