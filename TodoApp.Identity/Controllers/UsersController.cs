@@ -26,7 +26,7 @@ namespace TodoApp.Identity.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register(UserRegisterDto userToRegister)
+        public async Task<IActionResult> Register([FromForm]UserRegisterDto userToRegister)
         {
             if (!await _roleManager.RoleExistsAsync(userToRegister.Role))
             {

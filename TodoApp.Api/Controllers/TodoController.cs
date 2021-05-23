@@ -29,7 +29,7 @@ namespace TodoApp.Api.Controllers
         }
 
         [HttpPost("create-todo")]
-        public async Task<IActionResult> CreateTodo(TodoDto todo)
+        public async Task<IActionResult> CreateTodo([FromForm]TodoDto todo)
         {
             if (todo == null)
             {

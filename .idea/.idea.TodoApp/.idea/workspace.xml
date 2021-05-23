@@ -5,25 +5,9 @@
     <projectFile>TodoApp.Api/TodoApp.Api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aef5398-ff77-4310-9e59-607ce6f0a696" name="Default Changelist" comment="Working registration and authorization (/connect/token)">
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/DTOs/TodoDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Helpers/CurrentUserMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Models/DbContexts/SqlServerDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/BaseEntity.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/Todo.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Services/CurrentUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Services/DbRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Services/ICurrentUser.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Services/IDbRepository.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Services/ITodoService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Services/TodoService.cs" afterDir="false" />
+    <list default="true" id="1aef5398-ff77-4310-9e59-607ce6f0a696" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Api/TodoApp.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/TodoApp.Api.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Api/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/appsettings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Identity/Controllers/UsersController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Identity/Controllers/UsersController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Identity/TodoApp.Identity.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Identity/TodoApp.Identity.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +18,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://D:/C#Utils/Learn/TodoProject/TodoApp/TodoApp.Identity/Services/IdentityConfiguration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5FFE8917-0314-4A7B-A075-2282CF0DB7D2/3/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/C#Utils/Learn/TodoProject/TodoApp/TodoApp.Identity/Controllers/UsersController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DAC046F9-6AB5-44F5-B46B-1AE6A128CF29/32/UserInfoRequest.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -66,8 +48,8 @@
       <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/Todo.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/ITodoService.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/IDbRepository.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/TodoService.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sqYwOdgJNpc2lAvAxOtTUSNQ10" />
@@ -88,7 +70,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.environmentSetup" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunManager" selected=".NET Launch Settings Profile.TodoApp.Api">
+  <component name="RunManager" selected=".NET Launch Settings Profile.TodoApp.Identity">
     <configuration name="TodoApp.Api" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/TodoApp.Api/TodoApp.Api.csproj" />
       <option name="LAUNCH_PROFILE_TFM" value="net5.0" />
@@ -160,7 +142,8 @@
       <updated>1621601825965</updated>
       <workItem from="1621601833569" duration="2339000" />
       <workItem from="1621607145933" duration="3110000" />
-      <workItem from="1621675017047" duration="11772000" />
+      <workItem from="1621675017047" duration="11818000" />
+      <workItem from="1621772991569" duration="449000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1621601849025</created>
@@ -197,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621678450399</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Alpha user info getting">
+      <created>1621688156563</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1621688156563</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +214,7 @@
     <MESSAGE value="register/login changes" />
     <MESSAGE value="comment" />
     <MESSAGE value="Working registration and authorization (/connect/token)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Working registration and authorization (/connect/token)" />
+    <MESSAGE value="Alpha user info getting" />
+    <option name="LAST_COMMIT_MESSAGE" value="Alpha user info getting" />
   </component>
 </project>
