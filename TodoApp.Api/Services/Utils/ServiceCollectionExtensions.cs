@@ -1,9 +1,8 @@
-using System.Threading;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 
-namespace TodoApp.Api.Services
+namespace TodoApp.Api.Services.Utils
 {
     public static class ServiceCollectionExtensions
     {

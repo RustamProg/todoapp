@@ -1,11 +1,14 @@
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TodoApp.Api.DTOs;
 using TodoApp.Api.Services;
+using TodoApp.Api.Services.ServicesAbstractions;
 
 namespace TodoApp.Api.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("comments")]
     public class CommentsController : Controller
     {

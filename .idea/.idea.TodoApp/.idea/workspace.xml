@@ -5,23 +5,26 @@
     <projectFile>TodoApp.Api/TodoApp.Api.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1aef5398-ff77-4310-9e59-607ce6f0a696" name="Default Changelist" comment="FromForm added">
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Controllers/CommentsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/DTOs/TodoCommentDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/TodoComment.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Services/ITodoCommentsService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Services/TodoCommentsService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Identity/Controllers/TestController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Identity/Services/CustomUserClaimsPrincipalFactory.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityProfileService.cs" afterDir="false" />
+    <list default="true" id="1aef5398-ff77-4310-9e59-607ce6f0a696" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Services/Repository/DbRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoApp.Api/Services/Repository/IDbRepository.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TodoApp.Identity/Services/ProfileService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Controllers/CommentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Controllers/CommentsController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Models/DbContexts/SqlServerDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Models/DbContexts/SqlServerDbContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/ITodoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Services/ITodoService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/TodoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Services/TodoService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Helpers/CurrentUserMiddleware.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Helpers/CurrentUserMiddleware.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/CurrentUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Services/Utils/CurrentUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/DbRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/ICurrentUser.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Services/Utils/ICurrentUser.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/IDbRepository.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/ITodoCommentsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Services/ServicesAbstractions/ITodoCommentsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/ITodoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Services/ServicesAbstractions/ITodoService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/ServiceCollectionExtensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Services/Utils/ServiceCollectionExtensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/TodoCommentsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Services/ServicesImplementations/TodoCommentsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/TodoService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Services/ServicesImplementations/TodoService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/TodoApp.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/TodoApp.Api.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Identity/TodoApp.Identity.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Identity/TodoApp.Identity.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +41,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/5FFE8917-0314-4A7B-A075-2282CF0DB7D2/3/IdentityUser.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/027AAB70-E669-496E-AFF5-E861C61CE63D/3/ProfileService.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/DAC046F9-6AB5-44F5-B46B-1AE6A128CF29/32/UserInfoRequest.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://D:/C#Utils/Learn/TodoProject/TodoApp/TodoApp.Api/Controllers/TodoController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7DADE0E0-07C4-4809-AAC9-1B78E77954E9/1B/UserClaimsPrincipalFactory.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D01EA799-E9C9-4F77-A043-C8ECB5387E2F/ff/7b2a568f/Enumerable.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/519468D0-250D-4254-862D-A79F0051F843/14/TestUserStore.cs" root0="SKIP_HIGHLIGHTING" />
@@ -57,30 +59,40 @@
       <option value="$PROJECT_DIR$/TodoApp.Api/appsettings.json" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/BaseEntity.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/DTOs/TodoDto.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Api/Services/DbRepository.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Controllers/UserInfoController.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/ICurrentUser.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/CurrentUser.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Entities/UserInfoRequest.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Api/Helpers/CurrentUserMiddleware.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/Todo.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Api/Services/IDbRepository.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Controllers/UsersController.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityProfileService.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Services/UserClaimsPrincipalFactory.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Services/CustomUserClaimsPrincipalFactory.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Controllers/TestController.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbContexts/SqlServerDbContext.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/TodoComment.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/ITodoCommentsService.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Api/Startup.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/ITodoService.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/CommentsController.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/DTOs/TodoCommentDto.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/TodoService.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/TodoCommentsService.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Identity/Services/ProfileService.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/IDbRepository.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/DbRepository.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/CommentsController.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/Utils/CurrentUser.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/Utils/ICurrentUser.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Helpers/CurrentUserMiddleware.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/Utils/ServiceCollectionExtensions.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/ServicesImplementations/TodoService.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/ServicesImplementations/TodoCommentsService.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/ServicesAbstractions/ITodoService.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/ServicesAbstractions/ITodoCommentsService.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/Repository/IDbRepository.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Services/Repository/DbRepository.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Startup.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sqYwOdgJNpc2lAvAxOtTUSNQ10" />
@@ -176,7 +188,8 @@
       <workItem from="1621601833569" duration="2339000" />
       <workItem from="1621607145933" duration="3110000" />
       <workItem from="1621675017047" duration="11818000" />
-      <workItem from="1621772991569" duration="10299000" />
+      <workItem from="1621772991569" duration="10412000" />
+      <workItem from="1621959105423" duration="4157000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1621601849025</created>
@@ -227,7 +240,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621773539792</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="comments">
+      <created>1621796850752</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1621796850752</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +276,8 @@
     <MESSAGE value="Working registration and authorization (/connect/token)" />
     <MESSAGE value="Alpha user info getting" />
     <MESSAGE value="FromForm added" />
-    <option name="LAST_COMMIT_MESSAGE" value="FromForm added" />
+    <MESSAGE value="comments" />
+    <option name="LAST_COMMIT_MESSAGE" value="comments" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using TodoApp.Api.DTOs;
 using TodoApp.Api.Models.DbEntities;
 
-namespace TodoApp.Api.Services
+namespace TodoApp.Api.Services.ServicesAbstractions
 {
     public interface ITodoService
     {

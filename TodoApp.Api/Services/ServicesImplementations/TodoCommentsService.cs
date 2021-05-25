@@ -1,23 +1,24 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TodoApp.Api.DTOs;
-using TodoApp.Api.Models.DbContexts;
 using TodoApp.Api.Models.DbEntities;
+using TodoApp.Api.Services.Repository;
+using TodoApp.Api.Services.ServicesAbstractions;
+using TodoApp.Api.Services.Utils;
 
-namespace TodoApp.Api.Services
+namespace TodoApp.Api.Services.ServicesImplementations
 {
     public class TodoCommentsService: ITodoCommentsService
     {
         // todo: add user 
         private readonly IDbRepository _dbRepository;
-        private readonly SqlServerDbContext _dbContext;
+        private readonly ICurrentUser _currentUser;
 
-        public TodoCommentsService(IDbRepository dbRepository, SqlServerDbContext dbContext)
+        public TodoCommentsService(IDbRepository dbRepository, ICurrentUser currentUser)
         {
             _dbRepository = dbRepository;
-            _dbContext = dbContext;
+            _currentUser = currentUser;
         }
 
         public TodoComment GetCommentById(long id)
@@ -27,7 +28,7 @@ namespace TodoApp.Api.Services
 
         public List<TodoComment> GetCommentsByTodo(long todoId)
         {
-            return _dbContext.TodoComments.Where(x => x.ParentTodo.Id == todoId).ToList();
+            return _dbRepository.Find<TodoComment>(x => x.ParentTodoId == todoId).ToList();
         }
 
         public List<TodoComment> GetAllComments()
@@ -39,8 +40,8 @@ namespace TodoApp.Api.Services
         {
             var comment = new TodoComment
             {
-                AuthorName = "Not impl",
-                AuthorId = Guid.NewGuid(),
+                AuthorName = _currentUser.Username,
+                AuthorId = _currentUser.Id,
                 CommentBody = todoCommentDto.CommentBody,
                 ParentTodoId = todoCommentDto.ParentTodoId,
             };

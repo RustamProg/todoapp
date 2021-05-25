@@ -1,6 +1,6 @@
 using System;
 
-namespace TodoApp.Api.Services
+namespace TodoApp.Api.Services.Utils
 {
     public class CurrentUser : ICurrentUser
     {

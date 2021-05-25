@@ -50,6 +50,7 @@ namespace TodoApp.Identity
                 .AddInMemoryApiScopes(IdentityConfiguration.GetScopes())
                 .AddInMemoryClients(IdentityConfiguration.GetClients())
                 .AddAspNetIdentity<ApplicationUser>()
+                .AddProfileService<ProfileService>()
                 .AddDeveloperSigningCredential(false);
 
             services.AddAuthentication()

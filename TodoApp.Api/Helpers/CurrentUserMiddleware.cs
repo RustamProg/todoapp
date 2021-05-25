@@ -1,11 +1,12 @@
 using System;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using IdentityModel.Client;
 using Microsoft.AspNetCore.Http;
-using TodoApp.Api.Services;
+using TodoApp.Api.Services.Utils;
 
 namespace TodoApp.Api.Helpers
 {
@@ -19,31 +20,18 @@ namespace TodoApp.Api.Helpers
         }
 
 
-        public async Task Invoke(HttpContext context, ICurrentUser currentUser, HttpClient httpClient)
+        public async Task Invoke(HttpContext context, ICurrentUser currentUser)
         {
             var token = context.Request.Headers["Authorization"].FirstOrDefault()?.Split(" ").Last();
-            var discoveryResponse = await httpClient.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
+            var handler = new JwtSecurityTokenHandler();
+            var jsonToken = handler.ReadJwtToken(token);
+            if (jsonToken != null)
             {
-                Address = "https://localhost:5001",
-                Policy =
-                {
-                    ValidateIssuerName = false
-                }
-            });
-            
-
-            var userInfo = await httpClient.GetUserInfoAsync(new UserInfoRequest
-            {
-                Address = discoveryResponse.UserInfoEndpoint,
-                Token = token
-            });
-
-            if (!userInfo.IsError)
-            {
-                currentUser.Username = userInfo.Claims.FirstOrDefault(x => x.Type == "name").Value;
-                currentUser.Id = new Guid(userInfo.Claims.FirstOrDefault(x => x.Type == "sub").Value);
-                currentUser.Email = userInfo.Claims.FirstOrDefault(x => x.Type == "email").Value;
+                currentUser.Id = new Guid(jsonToken.Claims.First(x => x.Type == "sub").Value);
+                currentUser.Username = jsonToken.Claims.First(x => x.Type == "Username").Value;
+                currentUser.Email = jsonToken.Claims.First(x => x.Type == "Email").Value;
             }
+            
             await _next(context);
         }
     }

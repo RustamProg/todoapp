@@ -1,24 +1,25 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TodoApp.Api.DTOs;
-using TodoApp.Api.Models.DbContexts;
 using TodoApp.Api.Models.DbEntities;
+using TodoApp.Api.Services.Repository;
+using TodoApp.Api.Services.ServicesAbstractions;
+using TodoApp.Api.Services.Utils;
 
-namespace TodoApp.Api.Services
+namespace TodoApp.Api.Services.ServicesImplementations
 {
     public class TodoService: ITodoService
     {
         
         // todo: add user 
         private readonly IDbRepository _dbRepository;
-        private readonly SqlServerDbContext _context;
+        private readonly ICurrentUser _currentUser;
 
-        public TodoService(IDbRepository dbRepository, SqlServerDbContext context)
+        public TodoService(IDbRepository dbRepository, ICurrentUser currentUser)
         {
             _dbRepository = dbRepository;
-            _context = context;
+            _currentUser = currentUser;
         }
 
         public async Task<Todo> CreateNewTodo(TodoDto newTodo)
@@ -29,8 +30,8 @@ namespace TodoApp.Api.Services
                 TextBody = newTodo.TextBody,
                 ExpirationDateTime = newTodo.ExpirationDateTime,
                 TodoImportance = newTodo.TodoImportance,
-                AuthorId = Guid.NewGuid(),
-                AuthorUsername = "not impl"
+                AuthorId = _currentUser.Id,
+                AuthorUsername = _currentUser.Username
             };
 
             await _dbRepository.AddAsync(todo);

@@ -4,11 +4,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TodoApp.Api.DTOs;
 using TodoApp.Api.Services;
+using TodoApp.Api.Services.ServicesAbstractions;
+using TodoApp.Api.Services.Utils;
 
 namespace TodoApp.Api.Controllers
 {
     [ApiController]
-    //[Authorize]
+    [Authorize]
     [Route("todo")]
     public class TodoController : Controller
     {
@@ -44,6 +46,12 @@ namespace TodoApp.Api.Controllers
         public IActionResult GetTodoById(long id)
         {
             return Ok(_todoService.GetTodoById(id));
+        }
+
+        [HttpGet("get-current-user")]
+        public ICurrentUser GetCurrentUser()
+        {
+            return _currentUser;
         }
 
         /*[HttpGet("current-user-todos")]

@@ -16,6 +16,10 @@ using Microsoft.OpenApi.Models;
 using TodoApp.Api.Helpers;
 using TodoApp.Api.Models.DbContexts;
 using TodoApp.Api.Services;
+using TodoApp.Api.Services.Repository;
+using TodoApp.Api.Services.ServicesAbstractions;
+using TodoApp.Api.Services.ServicesImplementations;
+using TodoApp.Api.Services.Utils;
 
 namespace TodoApp.Api
 {
@@ -67,7 +71,7 @@ namespace TodoApp.Api
             
             app.UseAuthorization();
 
-            //app.UseMiddleware<CurrentUserMiddleware>();
+            app.UseMiddleware<CurrentUserMiddleware>();
 
             app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
         }
