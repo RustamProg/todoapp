@@ -12,5 +12,6 @@ namespace TodoApp.Api.Models.DbContexts
         
         public DbSet<Todo> Todos { get; set; }
         public DbSet<TodoComment> TodoComments { get; set; }
+        public DbSet<Project> Projects { get; set; }
     }
 }

@@ -54,10 +54,10 @@ namespace TodoApp.Api.Controllers
             return _currentUser;
         }
 
-        /*[HttpGet("current-user-todos")]
+        [HttpGet("current-user-todos")]
         public IActionResult GetUser()
         {
             return Ok(_todoService.GetUsersTodos());
-        }*/
+        }
     }
 }

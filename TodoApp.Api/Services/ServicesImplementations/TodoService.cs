@@ -31,7 +31,8 @@ namespace TodoApp.Api.Services.ServicesImplementations
                 ExpirationDateTime = newTodo.ExpirationDateTime,
                 TodoImportance = newTodo.TodoImportance,
                 AuthorId = _currentUser.Id,
-                AuthorUsername = _currentUser.Username
+                AuthorUsername = _currentUser.Username,
+                ProjectId = newTodo.ProjectId
             };
 
             await _dbRepository.AddAsync(todo);
@@ -49,10 +50,9 @@ namespace TodoApp.Api.Services.ServicesImplementations
         }
 
         
-        // Здесь напрямую контекст использовал (надо исправить)
-        /*public List<Todo> GetUsersTodos()
+        public List<Todo> GetUsersTodos()
         {
-            return _context.Todos.Where(x => x.AuthorId == _currentUser.Id).ToList();
-        }*/
+            return _dbRepository.Find<Todo>(x => x.AuthorId == _currentUser.Id).ToList();
+        }
     }
 }

@@ -10,6 +10,6 @@ namespace TodoApp.Api.Services.ServicesAbstractions
         Task<Todo> CreateNewTodo(TodoDto newTodo);
         Todo GetTodoById(long id);
         List<Todo> GetAllTodos();
-        //List<Todo> GetUsersTodos();
+        List<Todo> GetUsersTodos();
     }
 }

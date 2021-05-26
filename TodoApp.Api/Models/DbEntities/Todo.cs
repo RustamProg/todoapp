@@ -12,6 +12,8 @@ namespace TodoApp.Api.Models.DbEntities
         public DateTime ExpirationDateTime { get; set; } = DateTime.Now.Add(TimeSpan.FromDays(7));
         public Guid AuthorId { get; set; }
         public string AuthorUsername { get; set; }
+        public long ProjectId { get; set; }
+        public Project Project { get; set; }
     }
 
     public enum ImportanceLevels

@@ -51,6 +51,7 @@ namespace TodoApp.Api
             services.AddScoped<ITodoService, TodoService>();
             services.AddScoped<ICurrentUser, CurrentUser>();
             services.AddScoped<ITodoCommentsService, TodoCommentsService>();
+            services.AddScoped<IProjectsService, ProjectsService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

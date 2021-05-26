@@ -9,5 +9,6 @@ namespace TodoApp.Api.DTOs
         public string TextBody { get; set; }
         public ImportanceLevels TodoImportance { get; set; }
         public DateTime ExpirationDateTime { get; set; }
+        public long ProjectId { get; set; }
     }
 }
