@@ -52,6 +52,16 @@ namespace TodoApp.Api
             services.AddScoped<ICurrentUser, CurrentUser>();
             services.AddScoped<ITodoCommentsService, TodoCommentsService>();
             services.AddScoped<IProjectsService, ProjectsService>();
+            
+            services.AddCors(options => {
+                options.AddPolicy("default", policy =>
+                {
+                    policy.WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -67,7 +77,9 @@ namespace TodoApp.Api
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            
+            app.UseCors("default");
+            
             app.UseAuthentication();
             
             app.UseAuthorization();

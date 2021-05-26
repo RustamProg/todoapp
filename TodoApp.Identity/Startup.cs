@@ -63,6 +63,16 @@ namespace TodoApp.Identity
                 });
             
             services.AddTransient<IUserClaimsPrincipalFactory<ApplicationUser>, CustomUserClaimsPrincipalFactory>();
+            
+            services.AddCors(options => {
+                options.AddPolicy("default", policy =>
+                {
+                    policy.WithOrigins("http://localhost:3000")
+                        .AllowAnyHeader()
+                        .AllowAnyMethod()
+                        .AllowCredentials();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -78,6 +88,8 @@ namespace TodoApp.Identity
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            
+            app.UseCors("default");
 
             app.UseAuthentication();
             

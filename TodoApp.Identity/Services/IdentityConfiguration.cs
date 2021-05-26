@@ -58,6 +58,10 @@ namespace TodoApp.Identity.Services
                         "role",
                         "TodoAPI"
                     },
+                    AllowedCorsOrigins =
+                    { 
+                        "http://localhost:3000" 
+                    },
                     AllowOfflineAccess = false, // Если true, то будет refresh-token,
                     AccessTokenLifetime = 60 * 60 * 24 * 7
                 }
