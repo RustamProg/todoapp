@@ -7,9 +7,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1aef5398-ff77-4310-9e59-607ce6f0a696" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityConfiguration.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +180,8 @@
       <workItem from="1622013735203" duration="50000" />
       <workItem from="1622021645970" duration="7158000" />
       <workItem from="1622047375570" duration="899000" />
-      <workItem from="1622053422813" duration="3135000" />
+      <workItem from="1622053422813" duration="3240000" />
+      <workItem from="1622116217064" duration="596000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1621601849025</created>
@@ -255,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622037277062</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="CORS updated">
+      <created>1622057098042</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1622057098042</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -287,7 +292,8 @@
     <MESSAGE value="comments" />
     <MESSAGE value="Working CurrentUser.cs" />
     <MESSAGE value="projects" />
-    <option name="LAST_COMMIT_MESSAGE" value="projects" />
+    <MESSAGE value="CORS updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="CORS updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
