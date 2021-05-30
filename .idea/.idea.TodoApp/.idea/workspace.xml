@@ -7,6 +7,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1aef5398-ff77-4310-9e59-607ce6f0a696" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +68,6 @@
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/Repository/IDbRepository.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/Repository/DbRepository.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/ServicesAbstractions/ITodoService.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/Todo.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbContexts/SqlServerDbContext.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/ServicesAbstractions/IProjectsService.cs" />
@@ -80,6 +80,7 @@
       <option value="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityConfiguration.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Startup.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/TodoController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sqYwOdgJNpc2lAvAxOtTUSNQ10" />
@@ -182,6 +183,9 @@
       <workItem from="1622047375570" duration="899000" />
       <workItem from="1622053422813" duration="3240000" />
       <workItem from="1622116217064" duration="596000" />
+      <workItem from="1622176378485" duration="31000" />
+      <workItem from="1622298765844" duration="2709000" />
+      <workItem from="1622360540197" duration="2112000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1621601849025</created>
@@ -260,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622057098042</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="commmoit">
+      <created>1622176398379</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1622176398379</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,7 +304,8 @@
     <MESSAGE value="Working CurrentUser.cs" />
     <MESSAGE value="projects" />
     <MESSAGE value="CORS updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="CORS updated" />
+    <MESSAGE value="commmoit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commmoit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
