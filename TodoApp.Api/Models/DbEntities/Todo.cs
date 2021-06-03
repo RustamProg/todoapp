@@ -14,11 +14,18 @@ namespace TodoApp.Api.Models.DbEntities
         public string AuthorUsername { get; set; }
         public long ProjectId { get; set; }
         public Project Project { get; set; }
+        
     }
 
     public enum ImportanceLevels
     {
+        /// <summary>
+        /// Очень низкий
+        /// </summary>
         VeryLow,
+        /// <summary>
+        /// Низкий
+        /// </summary>
         Low,
         Medium,
         High,

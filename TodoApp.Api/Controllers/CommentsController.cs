@@ -19,25 +19,29 @@ namespace TodoApp.Api.Controllers
             _todoCommentsService = todoCommentsService;
         }
 
-        [HttpGet("all-comments")]
+        /// <summary>
+        /// Получение всех комментариев
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         public IActionResult GetAllComments()
         {
             return Ok(_todoCommentsService.GetAllComments());
         }
         
-        [HttpGet("todos-comments")]
+        [HttpGet("todos")]
         public IActionResult GetCommentsByTodo(long todoId)
         {
             return Ok(_todoCommentsService.GetCommentsByTodo(todoId));
         }
 
-        [HttpGet("comment-by-id")]
+        [HttpGet("{commentId}")]
         public IActionResult GetCommentById(long commentId)
         {
             return Ok(_todoCommentsService.GetCommentById(commentId));
         }
         
-        [HttpPost("post-comment")]
+        [HttpPost]
         public async Task<IActionResult> PostComment([FromForm]TodoCommentDto todoCommentDto)
         {
             if (todoCommentDto == null)

@@ -21,7 +21,7 @@ namespace TodoApp.Api.Controllers
             _currentUser = currentUser;
         }
 
-        [HttpPost("create-project")]
+        [HttpPost]
         public async Task<IActionResult> CreateProject([FromForm]ProjectDto projectDto)
         {
             if (projectDto == null)
@@ -31,13 +31,13 @@ namespace TodoApp.Api.Controllers
             return Ok(await _projectsService.CreateNewProject(projectDto));
         }
 
-        [HttpGet("all-projects")]
+        [HttpGet]
         public IActionResult GetAllProjects()
         {
             return Ok(_projectsService.GetAllProjects());
         }
         
-        [HttpGet("all-user-projects")]
+        [HttpGet("user")]
         public IActionResult GetAllUserProjects()
         {
             return Ok(_projectsService.GetAllUserProjects());

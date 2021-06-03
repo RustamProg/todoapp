@@ -23,14 +23,14 @@ namespace TodoApp.Api.Controllers
             _currentUser = currentUser;
         }
 
-        [HttpGet("get-todos")]
+        [HttpGet]
         public IActionResult GetTodos()
         {
             var todos = _todoService.GetAllTodos();
             return Ok(todos);
         }
 
-        [HttpPost("create-todo")]
+        [HttpPost]
         public async Task<IActionResult> CreateTodo(TodoDto todo)
         {
             if (todo == null)
@@ -39,7 +39,7 @@ namespace TodoApp.Api.Controllers
             }
             
             var result = await _todoService.CreateNewTodo(todo);
-            return Created("http://localhost:5000/", result);
+            return Ok(result);
         }
 
         [HttpGet("{id}")]
@@ -48,13 +48,13 @@ namespace TodoApp.Api.Controllers
             return Ok(_todoService.GetTodoById(id));
         }
 
-        [HttpGet("get-current-user")]
+        [HttpGet("current-user")]
         public ICurrentUser GetCurrentUser()
         {
             return _currentUser;
         }
 
-        [HttpGet("current-user-todos")]
+        [HttpGet("user")]
         public IActionResult GetUser()
         {
             return Ok(_todoService.GetUsersTodos());
