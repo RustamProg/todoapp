@@ -13,6 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Newtonsoft.Json;
 using TodoApp.Api.Helpers;
 using TodoApp.Api.Models.DbContexts;
 using TodoApp.Api.Services;
@@ -37,7 +38,7 @@ namespace TodoApp.Api
         {
             services.AddDbContext<SqlServerDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("TodoConnection")));
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson(options => options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);;
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddIdentityServerAuthentication(JwtBearerDefaults.AuthenticationScheme, options =>
                 {

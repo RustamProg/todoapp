@@ -7,6 +7,9 @@ using TodoApp.Api.Services.ServicesAbstractions;
 
 namespace TodoApp.Api.Controllers
 {
+    /// <summary>
+    /// Комментарии
+    /// </summary>
     [ApiController]
     [Authorize]
     [Route("comments")]
@@ -14,6 +17,10 @@ namespace TodoApp.Api.Controllers
     {
         private readonly ITodoCommentsService _todoCommentsService;
 
+        /// <summary>
+        /// Контроллер управления комментариями
+        /// </summary>
+        /// <param name="todoCommentsService"></param>
         public CommentsController(ITodoCommentsService todoCommentsService)
         {
             _todoCommentsService = todoCommentsService;
@@ -29,18 +36,33 @@ namespace TodoApp.Api.Controllers
             return Ok(_todoCommentsService.GetAllComments());
         }
         
+        /// <summary>
+        /// Получение всех комментариев у определенного задания (Task)
+        /// </summary>
+        /// <param name="todoId">Идентификатор задания</param>
+        /// <returns></returns>
         [HttpGet("todos")]
         public IActionResult GetCommentsByTodo(long todoId)
         {
             return Ok(_todoCommentsService.GetCommentsByTodo(todoId));
         }
 
+        /// <summary>
+        /// Получение комментария по ID
+        /// </summary>
+        /// <param name="commentId">Идентификатор комментария</param>
+        /// <returns></returns>
         [HttpGet("{commentId}")]
         public IActionResult GetCommentById(long commentId)
         {
             return Ok(_todoCommentsService.GetCommentById(commentId));
         }
         
+        /// <summary>
+        /// Создать комментарий
+        /// </summary>
+        /// <param name="todoCommentDto"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> PostComment([FromForm]TodoCommentDto todoCommentDto)
         {

@@ -9,20 +9,29 @@ using TodoApp.Api.Services.Utils;
 
 namespace TodoApp.Api.Controllers
 {
+    /// <summary>
+    /// Задания (todos)
+    /// </summary>
     [ApiController]
     [Authorize]
     [Route("todo")]
     public class TodoController : Controller
     {
         private readonly ITodoService _todoService;
-        private readonly ICurrentUser _currentUser;
 
-        public TodoController(ITodoService todoService, ICurrentUser currentUser)
+        /// <summary>
+        /// Контроллер управления заданиями
+        /// </summary>
+        /// <param name="todoService"></param>
+        public TodoController(ITodoService todoService)
         {
             _todoService = todoService;
-            _currentUser = currentUser;
         }
 
+        /// <summary>
+        /// Получить список всех заданий
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult GetTodos()
         {
@@ -30,6 +39,11 @@ namespace TodoApp.Api.Controllers
             return Ok(todos);
         }
 
+        /// <summary>
+        /// Создать задание
+        /// </summary>
+        /// <param name="todo"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> CreateTodo(TodoDto todo)
         {
@@ -42,18 +56,21 @@ namespace TodoApp.Api.Controllers
             return Ok(result);
         }
 
+        /// <summary>
+        /// Получить задание по ID
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet("{id}")]
         public IActionResult GetTodoById(long id)
         {
             return Ok(_todoService.GetTodoById(id));
         }
 
-        [HttpGet("current-user")]
-        public ICurrentUser GetCurrentUser()
-        {
-            return _currentUser;
-        }
-
+        /// <summary>
+        /// Получить задания ткущего пользователя (пользователь в токене)
+        /// </summary>
+        /// <returns></returns>
         [HttpGet("user")]
         public IActionResult GetUser()
         {

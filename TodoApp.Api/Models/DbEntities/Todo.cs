@@ -17,6 +17,9 @@ namespace TodoApp.Api.Models.DbEntities
         
     }
 
+    /// <summary>
+    /// Приоритет задания
+    /// </summary>
     public enum ImportanceLevels
     {
         /// <summary>
@@ -27,8 +30,17 @@ namespace TodoApp.Api.Models.DbEntities
         /// Низкий
         /// </summary>
         Low,
+        /// <summary>
+        /// Средний
+        /// </summary>
         Medium,
+        /// <summary>
+        /// Высокий
+        /// </summary>
         High,
+        /// <summary>
+        /// Очень высокий
+        /// </summary>
         VeryHigh
     }
 }

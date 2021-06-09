@@ -48,11 +48,13 @@ namespace TodoApp.Api.Services.ServicesImplementations
         {
             return _dbRepository.GetAll<Todo>().ToList();
         }
-
+        
         
         public List<Todo> GetUsersTodos()
         {
             return _dbRepository.Find<Todo>(x => x.AuthorId == _currentUser.Id).ToList();
         }
+
+        
     }
 }

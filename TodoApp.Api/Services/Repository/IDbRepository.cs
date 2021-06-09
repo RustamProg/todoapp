@@ -14,7 +14,9 @@ namespace TodoApp.Api.Services.Repository
         Task<T> Remove<T>(T entity) where T : BaseEntity;
         Task RemoveRange<T>(IEnumerable<T> entities) where T : BaseEntity;
         IQueryable<T> Find<T>(Expression<Func<T, bool>> expression) where T : BaseEntity;
+        IQueryable<T> FindWithInclude<T, TP>(Expression<Func<T, bool>> expression, Expression<Func<T, TP>> navigationPropertyPath) where T : BaseEntity; //
         IQueryable<T> GetAll<T>() where T : BaseEntity;
+        IQueryable<T> GetAllWithInclude<T, TP>(Expression<Func<T, TP>> navigationPropertyPath) where T : BaseEntity; //
         T GetById<T>(long id) where T : BaseEntity;
         
     }
