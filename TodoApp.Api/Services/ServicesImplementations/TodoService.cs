@@ -55,6 +55,9 @@ namespace TodoApp.Api.Services.ServicesImplementations
             return _dbRepository.Find<Todo>(x => x.AuthorId == _currentUser.Id).ToList();
         }
 
-        
+        public async Task<Todo> DeleteTodo(long todoId)
+        {
+            return await _dbRepository.Remove<Todo>(new Todo {Id = todoId});
+        }
     }
 }

@@ -16,17 +16,15 @@ namespace TodoApp.Identity.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
-        private readonly HttpClient _httpClient;
 
-        public UsersController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager, HttpClient httpClient)
+        public UsersController(UserManager<ApplicationUser> userManager, RoleManager<IdentityRole> roleManager)
         {
             _userManager = userManager;
             _roleManager = roleManager;
-            _httpClient = httpClient;
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> Register([FromForm]UserRegisterDto userToRegister)
+        public async Task<IActionResult> Register(UserRegisterDto userToRegister)
         {
             if (!await _roleManager.RoleExistsAsync(userToRegister.Role))
             {
@@ -59,16 +57,7 @@ namespace TodoApp.Identity.Controllers
 
             await _userManager.AddToRoleAsync(appUser, userToRegister.Role == "admin" ? "admin" : "user"); // Просто пока костыль
 
-            return Created("http://localhost:5005/registered-page", appUser);
+            return Ok(appUser);
         }
-
-        // Это не нужно?
-        /*
-        [HttpPost("login")]
-        public IActionResult Login(UserLoginDto userToLogin) 
-        {
-            return null; // Пока не реализовал
-        }*/
-        
     }
 }

@@ -17,7 +17,7 @@ namespace TodoApp.Api.Controllers
         }
         
         /// <summary>
-        /// (Костыль) Получить информацию о текущем пользователе
+        /// Получить информацию о текущем пользователе
         /// </summary>
         /// <returns></returns>
         [HttpGet("current-user")]

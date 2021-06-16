@@ -11,5 +11,6 @@ namespace TodoApp.Api.Services.ServicesAbstractions
         Todo GetTodoById(long id);
         List<Todo> GetAllTodos();
         List<Todo> GetUsersTodos();
+        Task<Todo> DeleteTodo(long todoId);
     }
 }

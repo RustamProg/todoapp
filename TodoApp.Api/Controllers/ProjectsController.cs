@@ -35,7 +35,7 @@ namespace TodoApp.Api.Controllers
         /// <param name="projectDto"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<IActionResult> CreateProject([FromForm]ProjectDto projectDto)
+        public async Task<IActionResult> CreateProject(ProjectDto projectDto)
         {
             if (projectDto == null)
             {

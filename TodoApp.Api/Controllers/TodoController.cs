@@ -76,5 +76,16 @@ namespace TodoApp.Api.Controllers
         {
             return Ok(_todoService.GetUsersTodos());
         }
+
+        /// <summary>
+        /// Удалить задание по идентификатору
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTodo(long id)
+        {
+            return Ok(await _todoService.DeleteTodo(id));
+        }
     }
 }

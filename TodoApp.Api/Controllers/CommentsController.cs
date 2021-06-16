@@ -64,7 +64,7 @@ namespace TodoApp.Api.Controllers
         /// <param name="todoCommentDto"></param>
         /// <returns></returns>
         [HttpPost]
-        public async Task<IActionResult> PostComment([FromForm]TodoCommentDto todoCommentDto)
+        public async Task<IActionResult> PostComment(TodoCommentDto todoCommentDto)
         {
             if (todoCommentDto == null)
             {
