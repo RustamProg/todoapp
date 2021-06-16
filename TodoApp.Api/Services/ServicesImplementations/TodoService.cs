@@ -46,18 +46,23 @@ namespace TodoApp.Api.Services.ServicesImplementations
 
         public List<Todo> GetAllTodos()
         {
-            return _dbRepository.GetAll<Todo>().ToList();
+            return _dbRepository.GetAll<Todo>().OrderByDescending(x => x.TodoImportance).ToList();
         }
         
         
         public List<Todo> GetUsersTodos()
         {
-            return _dbRepository.Find<Todo>(x => x.AuthorId == _currentUser.Id).ToList();
+            return _dbRepository.Find<Todo>(x => x.AuthorId == _currentUser.Id).OrderByDescending(x => x.TodoImportance).ToList();
         }
 
         public async Task<Todo> DeleteTodo(long todoId)
         {
             return await _dbRepository.Remove<Todo>(new Todo {Id = todoId});
+        }
+
+        public List<Todo> GetTodosByProjectId(long projectId)
+        {
+            return _dbRepository.Find<Todo>(x => x.ProjectId == projectId).ToList();
         }
     }
 }

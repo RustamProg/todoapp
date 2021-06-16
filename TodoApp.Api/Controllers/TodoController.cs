@@ -66,6 +66,17 @@ namespace TodoApp.Api.Controllers
         {
             return Ok(_todoService.GetTodoById(id));
         }
+        
+        /// <summary>
+        /// Получить задание по ID родительского проекта
+        /// </summary>
+        /// <param name="id">ID проекта</param>
+        /// <returns></returns>
+        [HttpGet("project/{id}")]
+        public IActionResult GetTodosByProjectId(long id)
+        {
+            return Ok(_todoService.GetTodosByProjectId(id));
+        }
 
         /// <summary>
         /// Получить задания ткущего пользователя (пользователь в токене)

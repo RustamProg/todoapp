@@ -34,7 +34,7 @@ namespace TodoApp.Api.Services.ServicesImplementations
         /// <returns>Список проектов</returns>
         public List<Project> GetAllProjects()
         {
-            return _dbRepository.GetAll<Project>().ToList();
+            return _dbRepository.GetAll<Project>().OrderByDescending(x => x.CreateDate).ToList();
         }
 
         /// <summary>
@@ -43,7 +43,7 @@ namespace TodoApp.Api.Services.ServicesImplementations
         /// <returns>Список проектов</returns>
         public List<Project> GetAllUserProjects()
         {
-            return _dbRepository.Find<Project>(x => x.AuthorId == _currentUser.Id).ToList();
+            return _dbRepository.Find<Project>(x => x.AuthorId == _currentUser.Id).OrderByDescending(x => x.CreateDate).ToList();
         }
 
         /// <summary>

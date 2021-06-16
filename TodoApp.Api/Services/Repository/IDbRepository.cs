@@ -18,6 +18,6 @@ namespace TodoApp.Api.Services.Repository
         IQueryable<T> GetAll<T>() where T : BaseEntity;
         IQueryable<T> GetAllWithInclude<T, TP>(Expression<Func<T, TP>> navigationPropertyPath) where T : BaseEntity; //
         T GetById<T>(long id) where T : BaseEntity;
-        
+
     }
 }
