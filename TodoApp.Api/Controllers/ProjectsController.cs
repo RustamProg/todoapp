@@ -74,5 +74,16 @@ namespace TodoApp.Api.Controllers
         {
             return Ok(_projectsService.GetProjectById(id));
         }
+
+        /// <summary>
+        /// Удалить проект по идентификатору
+        /// </summary>
+        /// <param name="id">Идентификатор проекта</param>
+        /// <returns>Удалённый проект</returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteProject(long id)
+        {
+            return Ok(await _projectsService.DeleteProject(id));
+        }
     }
 }

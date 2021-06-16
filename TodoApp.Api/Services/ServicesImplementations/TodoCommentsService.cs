@@ -48,5 +48,10 @@ namespace TodoApp.Api.Services.ServicesImplementations
 
             await _dbRepository.AddAsync(comment);
         }
+
+        public async Task<TodoComment> DeleteComment(long commentId)
+        {
+            return await _dbRepository.Remove(new TodoComment {Id = commentId});
+        }
     }
 }

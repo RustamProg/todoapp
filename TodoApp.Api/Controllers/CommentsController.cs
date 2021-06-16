@@ -74,5 +74,16 @@ namespace TodoApp.Api.Controllers
             await _todoCommentsService.PostComment(todoCommentDto);
             return Ok();
         }
+        
+        /// <summary>
+        /// Удалить комментарий по идентификатору
+        /// </summary>
+        /// <param name="id">Идентификатор комментария</param>
+        /// <returns>Удалённый комментарий</returns>
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteProject(long id)
+        {
+            return Ok(await _todoCommentsService.DeleteComment(id));
+        }
     }
 }

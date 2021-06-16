@@ -11,5 +11,6 @@ namespace TodoApp.Api.Services.ServicesAbstractions
         List<TodoComment> GetCommentsByTodo(long todoId);
         List<TodoComment> GetAllComments();
         Task PostComment(TodoCommentDto todoCommentDto);
+        Task<TodoComment> DeleteComment(long commentId);
     }
 }
