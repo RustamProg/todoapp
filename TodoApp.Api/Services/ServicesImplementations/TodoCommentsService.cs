@@ -36,7 +36,7 @@ namespace TodoApp.Api.Services.ServicesImplementations
             return _dbRepository.GetAll<TodoComment>().ToList();
         }
 
-        public async Task PostComment(TodoCommentDto todoCommentDto)
+        public async Task<TodoComment> PostComment(TodoCommentDto todoCommentDto)
         {
             var comment = new TodoComment
             {
@@ -47,6 +47,7 @@ namespace TodoApp.Api.Services.ServicesImplementations
             };
 
             await _dbRepository.AddAsync(comment);
+            return comment;
         }
 
         public async Task<TodoComment> DeleteComment(long commentId)

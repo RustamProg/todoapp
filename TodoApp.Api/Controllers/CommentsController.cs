@@ -70,9 +70,8 @@ namespace TodoApp.Api.Controllers
             {
                 return BadRequest("Invalid comment parameters");
             }
-
-            await _todoCommentsService.PostComment(todoCommentDto);
-            return Ok();
+            
+            return Ok(await _todoCommentsService.PostComment(todoCommentDto));
         }
         
         /// <summary>

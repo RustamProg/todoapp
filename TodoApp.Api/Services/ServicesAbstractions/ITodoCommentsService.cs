@@ -10,7 +10,7 @@ namespace TodoApp.Api.Services.ServicesAbstractions
         TodoComment GetCommentById(long id);
         List<TodoComment> GetCommentsByTodo(long todoId);
         List<TodoComment> GetAllComments();
-        Task PostComment(TodoCommentDto todoCommentDto);
+        Task<TodoComment> PostComment(TodoCommentDto todoCommentDto);
         Task<TodoComment> DeleteComment(long commentId);
     }
 }
