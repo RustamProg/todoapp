@@ -6,10 +6,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1aef5398-ff77-4310-9e59-607ce6f0a696" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/TodoApp.Identity/Controllers/ExternalController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TodoApp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Controllers/CommentsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Controllers/CommentsController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/ServicesAbstractions/ITodoCommentsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Services/ServicesAbstractions/ITodoCommentsService.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Services/ServicesImplementations/TodoCommentsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Services/ServicesImplementations/TodoCommentsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/Controllers/ProjectsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/Controllers/ProjectsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Api/TodoApp.Api.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Api/TodoApp.Api.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +35,6 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/TodoApp.Identity/Models/AuthDbContext.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/appsettings.json" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Models/UserDTO.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Models/UserDto.cs" />
@@ -66,8 +66,6 @@
       <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/Project.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/DTOs/ProjectDto.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/DTOs/TodoDto.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityConfiguration.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Models/DbEntities/TodoComment.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/Repository/DbRepository.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Startup.cs" />
@@ -76,7 +74,6 @@
       <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/UserController.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Identity/Controllers/UsersController.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/ServicesAbstractions/IProjectsService.cs" />
-      <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/ProjectsController.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/ServicesImplementations/ProjectsService.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/ServicesAbstractions/ITodoService.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/Repository/IDbRepository.cs" />
@@ -85,6 +82,10 @@
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/ServicesAbstractions/ITodoCommentsService.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Services/ServicesImplementations/TodoCommentsService.cs" />
       <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/CommentsController.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Identity/Startup.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Identity/Controllers/ExternalController.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Identity/Services/IdentityConfiguration.cs" />
+      <option value="$PROJECT_DIR$/TodoApp.Api/Controllers/ProjectsController.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1sqYwOdgJNpc2lAvAxOtTUSNQ10" />
@@ -205,7 +206,9 @@
       <workItem from="1623684286578" duration="1268000" />
       <workItem from="1623743434950" duration="4410000" />
       <workItem from="1623815745813" duration="6389000" />
-      <workItem from="1624035310359" duration="1841000" />
+      <workItem from="1624035310359" duration="1866000" />
+      <workItem from="1624092083270" duration="2321000" />
+      <workItem from="1624197696256" duration="4263000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1621601849025</created>
@@ -333,7 +336,14 @@
       <option name="project" value="LOCAL" />
       <updated>1623863116984</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Comment post fix">
+      <created>1624040469304</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1624040469304</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +383,8 @@
     <MESSAGE value="Some changes" />
     <MESSAGE value="To review" />
     <MESSAGE value="new api routes" />
-    <option name="LAST_COMMIT_MESSAGE" value="new api routes" />
+    <MESSAGE value="Comment post fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comment post fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -431,6 +442,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/TodoApp.Api/Controllers/ProjectsController.cs</url>
+          <line>67</line>
+          <properties documentPath="D:\C#Utils\Learn\TodoProject\TodoApp\TodoApp.Api\Controllers\ProjectsController.cs" initialLine="67" containingFunctionPresentation="method 'GetAllUserProjects'">
+            <startOffsets>
+              <option value="2076" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2127" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

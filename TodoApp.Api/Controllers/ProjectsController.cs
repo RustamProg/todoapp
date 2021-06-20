@@ -1,7 +1,10 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using JsonApiSerializer.JsonApi;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TodoApp.Api.DTOs;
+using TodoApp.Api.Models.DbEntities;
 using TodoApp.Api.Services.ServicesAbstractions;
 using TodoApp.Api.Services.Utils;
 
@@ -59,9 +62,11 @@ namespace TodoApp.Api.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet("user")]
+        [ProducesResponseType(200, Type = typeof(DocumentRoot<List<Project>>))]
         public IActionResult GetAllUserProjects()
         {
-            return Ok(_projectsService.GetAllUserProjects());
+            var result = _projectsService.GetAllUserProjects();
+            return Ok(new DocumentRoot<List<Project>>{Data = result});
         }
         
         /// <summary>
